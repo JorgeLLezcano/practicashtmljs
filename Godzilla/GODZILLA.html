@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Godzilla.html</title>
+<style>
+    
+@keyframes move {
+100%{ transform: translateX(75rem);}
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.wrapper{
+     height: 300px;
+     overflow: hidden;
+     
+     animation: move 20s infinite linear;
+}
+@keyframes stamp {
+0%,
+70%,
+100%{
+transform: rotate(0)
+}
+60%{
+transform: translateY(-2.5rem) rotate(-6deg);
+}
+}
+
+.Godzilla{
+    
+    animation: stamp 1s infinite;
+}
+img {
+   width: 50%;
+}
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+<img class="Godzilla" src="./gordotzilla.png"/>
+</div>
+</body>
+</html>

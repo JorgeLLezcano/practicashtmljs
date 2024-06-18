@@ -1,0 +1,8 @@
+#draggableElement {
+    width: 100px;
+    height: 100px;
+    background-color: #eaeaea;
+    cursor: move;
+    position: absolute;
+  }
+  

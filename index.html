@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            background: blueviolet;
+        }
+input{
+    appearance: none;
+    padding: 9px 25px;
+    background-color: #fff;
+}
+input::before{
+    content: "Open";
+
+}
+input:checked::before{
+    content: "Close";
+}
+
+    </style>
+</head>
+<body>
+    <input type="checkbox"/>
+</body>
+</html>

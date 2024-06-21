@@ -1,0 +1,3 @@
+[submodule "pruebaid"]
+	path = pruebaid
+	url = https://github.com/JorgeLLezcano/practicashtmljs

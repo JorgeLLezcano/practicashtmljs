@@ -1,0 +1,116 @@
+.conteiner{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px;
+    gap: 10px;
+  }
+  .card { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    position: relative;
+    border-radius: 15px; 
+  }
+  .card::after{
+    content: 'revelio';
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    opacity: 0;
+  }
+  .card:hover::after{
+    animation: revel 2s ease both;
+  }
+  @keyframes revel{
+    0%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0
+    }
+  }
+  .card img{
+    height: 100%;
+    width: 100%;
+    mask-image: linear-gradient(black 80%, transparent);
+  }
+  
+  .front,
+  .back { 
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    /* Existing common styles for front and back faces */
+    backface-visibility: hidden;
+    transition: opacity 2s ease;
+    
+  }
+  .back {
+    /* Styles for the back face */
+     /* Initially rotate the back face 180deg */
+    /* transform: rotateY(180deg);  */
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .card:hover .front{
+   opacity: 0;
+   filter: blur(3px);
+   
+  }
+  
+  
+  .card:hover .back {
+    /* Fade in back image on hover */
+    opacity: 1;
+  }
+  .lumus{
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 50%;
+    position:fixed;
+    filter: blur(5px);
+     animation: latencia 2s infinite;
+  }
+  
+  
+  @keyframes latencia{
+    0%{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(4);
+    }
+    100%{
+      transform: scale(0);
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  body{
+    background: #333;
+    font-family: sans-serif;
+  }
